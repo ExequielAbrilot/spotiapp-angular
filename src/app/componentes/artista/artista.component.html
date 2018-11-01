@@ -1,0 +1,9 @@
+
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+
+<div *ngIf="!loading">
+  <app-informacion-de-cabecera [artista] = "artista" ></app-informacion-de-cabecera>
+
+  <app-top-track [idArtist]= "artista.id" ></app-top-track>
+</div>
+

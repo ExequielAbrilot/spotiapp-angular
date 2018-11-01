@@ -1,0 +1,10 @@
+
+<div class="card animated fadeIn">
+  <img class="card-img-top" (click)="obtenerCardId()" [src]="elementoQueSeMuestra.images | noImage" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{elementoQueSeMuestra.name}}</h5>
+    <p class="card-text">
+      <span (click)="obtenerCardId(artista)" *ngFor="let artista of elementoQueSeMuestra.artists" href="#" class="badge badge-primary puntero">{{artista.name}}</span>
+    </p>
+  </div>
+</div>

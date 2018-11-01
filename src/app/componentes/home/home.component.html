@@ -1,0 +1,14 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="this.error"class="aler alert-danger animated fadeIn">
+    <h3>
+        Error
+    </h3>
+    <p>{{this.mensaje}}</p>
+</div>
+
+<div class="card-columns">
+    <app-card-item (idCard)=verArtista($event) [elementoQueSeMuestra]="cancion" [desde]="'home'" *ngFor="let cancion of nuevasCanciones" ></app-card-item>
+</div>
+
+
